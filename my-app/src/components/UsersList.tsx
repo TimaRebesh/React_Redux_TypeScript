@@ -1,15 +1,14 @@
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useActions } from "../hooks/useActions";
 import useTypedSelector from "../hooks/useTypedSelector";
-import { fetchUsers } from "../store/reducers/actiron-creators/users";
 
 export default function UsersList() {
 
     const { users, isLoading, error } = useTypedSelector(state => state.users);
-    const dispatch = useDispatch();
+    const { fetchUsers } = useActions();
 
     useEffect(() => {
-        dispatch(fetchUsers())
+        fetchUsers();
     }, [])
 
     if (isLoading)
