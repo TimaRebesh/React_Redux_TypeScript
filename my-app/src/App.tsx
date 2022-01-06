@@ -1,13 +1,14 @@
 import Comments from './components/Comments';
 import Photos from './components/Photos';
+import TabBar from './components/TabBar';
 import UsersList from './components/UsersList';
 
 function App() {
   return (
-    <div >
+    <div>
+      <TabBar />
       <Photos />
       <UsersList />
-      <br />
       <Comments />
     </div>
   );
