@@ -18,7 +18,7 @@ export default function Photos() {
         return <div>{error}</div>
 
     return (
-        <div>Photos
+        <div>
             <div className='list'>
                 {isLoading ?
                     <div>...Loading</div>

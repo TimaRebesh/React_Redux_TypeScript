@@ -11,15 +11,20 @@ export default function UsersList() {
         fetchUsers();
     }, [])
 
-    if (isLoading)
-        return <div>...Loading</div>
 
-    if (error)
-        return <div>{error}</div>
+    const getContent = () => {
+        if (isLoading)
+            return <div>...Loading</div>
+        if (error)
+            return <div>{error}</div>
+        return <>
+            {users.map(u => <div key={u.id}>{u.name} - {u.website}</div>)}
+        </>
+    }
 
     return (
-        <div>Users:
-            {users.map(u => <div key={u.id}>{u.name} - {u.website}</div>)}
+        <div className='list'>
+            {getContent()}
         </div>
     )
 }

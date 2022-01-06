@@ -18,7 +18,7 @@ export default function Comments() {
         return <div>{error}</div>
 
     return (
-        <div>Comments
+        <div>
             <div className='list'>
                 {isLoading ?
                     <div>...Loading</div>

@@ -6,17 +6,23 @@ export default function TabBar() {
 
     const { tab } = useTypedSelector(state => state.tabbar);
     const { switchTabBar } = useActions();
-    const tabs = [1, 2, 3]
+    
+    const tabs = [
+        { id: 1, text: 'Users' },
+        { id: 2, text: 'Comments' },
+        { id: 3, text: 'Albums' },
+        { id: 4, text: 'Photos' },
+    ]
 
     return (
         <div className='tab-bar'>
             {tabs.map(t => (
                 <div
-                    key={t}
-                    className={`tab ${t === tab ? 'selected' : ''}`}
-                    onClick={() => switchTabBar(t)}
+                    key={t.id}
+                    className={`tab ${t.id === tab ? 'selected' : ''}`}
+                    onClick={() => switchTabBar(t.id)}
                 >
-                    <div className='tab-content'>{t}</div>
+                    <div className='tab-content'>{t.text}</div>
                 </div>
             ))}
         </div>
