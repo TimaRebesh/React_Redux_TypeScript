@@ -18,8 +18,8 @@ export default function UsersList() {
         return <div>{error}</div>
 
     return (
-        <div>
-            {users.map(u => <div key={u.id}>{u.name}</div>)}
+        <div>Users:
+            {users.map(u => <div key={u.id}>{u.name} - {u.website}</div>)}
         </div>
     )
 }

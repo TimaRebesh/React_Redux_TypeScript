@@ -1,9 +1,14 @@
+import Comments from './components/Comments';
+import Photos from './components/Photos';
 import UsersList from './components/UsersList';
 
 function App() {
   return (
     <div >
-      <UsersList/>
+      <Photos />
+      <UsersList />
+      <br />
+      <Comments />
     </div>
   );
 }
