@@ -1,3 +1,4 @@
+import Albums from './components/Albums';
 import Comments from './components/Comments';
 import Photos from './components/Photos';
 import TabBar from './components/TabBar';
@@ -15,7 +16,7 @@ function App() {
       case 2:
         return <Comments />;
       case 3:
-        return <UsersList />;
+        return <Albums />;
       case 4:
         return <Photos />;
       default:
